@@ -1,6 +1,6 @@
 package me.screw.demojpa.post;
 
+import me.screw.demojpa.MyRepository;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface PostRepository extends JpaRepository<Post, Long>, PostCumstomRepository {
+public interface PostRepository extends MyRepository<Post, Long> {
 }
