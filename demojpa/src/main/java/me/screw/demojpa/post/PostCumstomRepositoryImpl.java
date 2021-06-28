@@ -12,13 +12,13 @@ import java.util.List;
 @Transactional
 public class PostCumstomRepositoryImpl implements PostCumstomRepository {
 
-@Autowired
+    @Autowired
     EntityManager entityManager;
 
-@Override
-public List<Post> findMyPost() {
+    @Override
+    public List<Post> findMyPost() {
         System.out.println("custom findMyPost");
         return entityManager.createQuery("SELECT p FROM Post AS p", Post.class)
         .getResultList();
-        }
-        }
+    }
+}
